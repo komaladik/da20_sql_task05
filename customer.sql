@@ -11,7 +11,7 @@ CREATE TABLE customer (
   balance DECIMAL(10, 2) DEFAULT 0.0,
   FOREIGN KEY (bank_id) REFERENCES bank(id)
 );
-
+ALTER TABLE customer ALTER COLUMN account_number TYPE VARCHAR(30);
 INSERT INTO customer (id, bank_id, first_name, last_name, email, phone_number, address, account_number, account_type, balance) VALUES
 (1, 1, 'Rahul', 'Sharma', 'rahul.sharma@example.com', '9876543210', '123 MG Road, Mumbai', 'ACC001SBI', 'Savings', 150000.00),
 (2, 2, 'Priya', 'Singh', 'priya.singh@example.com', '9876543211', '456 Karol Bagh, Delhi', 'ACC002HDFC', 'Current', 200000.00),
